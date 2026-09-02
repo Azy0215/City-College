@@ -1126,3 +1126,37 @@ footer {
         height: 280px;
     }
 }
+
+#home {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background: transparent;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 5, 20, 0.55),
+            rgba(10, 5, 20, 0.70)
+        ),
+        url("1000008466.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(2px);
+
+    z-index: 0;
+}
+
+#home > * {
+    position: relative;
+    z-index: 1;
+}
